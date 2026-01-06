@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Creative Learning Hub</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        /* Specific Styles for About Page */
+        .about-hero {
+            background-color: var(--primary-color);
+        }
+        .story-section {
+            background: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            margin-bottom: 40px;
+        }
+        .founder-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            align-items: center;
+            background-color: #f9f9f9;
+            padding: 40px;
+            border-radius: 10px;
+            border-left: 5px solid var(--accent-color);
+        }
+        .founder-img {
+            flex: 1;
+            min-width: 250px;
+            max-width: 350px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .founder-bio {
+            flex: 2;
+            min-width: 300px;
+        }
+        .trust-badge {
+            display: inline-block;
+            background: #e8f8f5;
+            color: #27ae60;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #27ae60;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVIGATION -->
+    <header>
+        <nav class="navbar">
+            <div class="logo"><a href="../index.html">Creative Learning & Wellness Harmony Hub</a></div>
+            <div class="menu-toggle" id="mobile-menu">☰</div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#" style="color: var(--accent-color);">Our Programs ▾</a>
+                    <div class="dropdown-content">
+                        <a href="school.html">Tubafashe Academy</a>
+                        <a href="wellness.html">Serenity Wellness</a>
+                        <a href="hydroponics.html">Cornucopia Hydroponics</a>
+                        <a href="arts.html">Ubuntu Arts</a>
+                    </div>
+                </li>
+                <li><a href="about.html" style="font-weight:bold;">About Us</a></li>
+                <li><a href="partners.html">Partners</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="support.html">Support Us</a></li>
+                <li><a href="contact.html" class="btn">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero about-hero">
+        <h1>Our Story & Mission</h1>
+        <p>From a small nursery school to a holistic hub for education, wellness, and innovation.</p>
+    </section>
+
+    <!-- MAIN CONTENT -->
+    <section class="pillars">
+        
+        <!-- Our Story -->
+        <div class="story-section">
+            <h2 class="section-title" style="text-align: left;">How It Started</h2>
+            <p><strong>2017:</strong> Tubafashe Academy School was established with an ambitious goal: to protect local children from abuse and violence and provide them with qualitative education.</p>
+            <br>
+            <p><strong>2018:</strong> We opened the Nursery School with only 14 students. By the second semester, we had grown to 36 students, offering free education and meals to vulnerable families.</p>
+            <br>
+            <p><strong>Today:</strong> We have evolved into the <strong>Creative Learning & Wellness Harmony Hub</strong>. We now serve the community through four pillars: Education, Mental Wellness, Sustainable Farming, and Arts.</p>
+        </div>
+
+        <!-- Founder Profile -->
+        <h2 class="section-title">Leadership</h2>
+        <div class="founder-section">
+            <!-- IMPORTANT: Replace src with Dr. Chaste's photo -->
+            <img src="https://via.placeholder.com/350x400/2C3E50/ffffff?text=Dr.+Uwihoreye+Chaste" alt="Dr. Uwihoreye Chaste" class="founder-img">
+            
+            <div class="founder-bio">
+                <h3 style="color: var(--primary-color);">Dr. Uwihoreye Chaste</h3>
+                <p style="color: var(--accent-color); font-weight: bold;">Founder & Director</p>
+                <br>
+                <p>Dr. Chaste is the visionary behind the Hub. A clinical psychologist with a Master’s degree from the University of Rwanda, he has over 15 years of experience working with traumatized children and community development.</p>
+                <br>
+                <p>He serves on the board of various national and international organizations and believes that a school is the best place to prevent child abuse and build a safe future.</p>
+                <br>
+                <blockquote>"Sending children to school is the key investment for humanity."</blockquote>
+            </div>
+        </div>
+
+        <!-- Legal & Trust -->
+        <div style="margin-top: 50px; text-align: center;">
+            <h3 style="margin-bottom: 20px;">Legal Status & Trust</h3>
+            <p style="max-width: 600px; margin: 0 auto 20px;">We are a fully registered and compliant organization in Rwanda, committed to transparency and excellence.</p>
+            
+            <div>
+                <span class="trust-badge">✓ Registered in Rwanda</span>
+                <span class="trust-badge">✓ Accredited by MINEDUC</span>
+                <span class="trust-badge">✓ Partnered with International NGOs</span>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>Contact Us</h4>
+                <p><strong>Phone:</strong> +250 788 305 007</p>
+                <p><strong>Location:</strong> Rwamagana Dist., Nyakariro Sector</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="school.html">Tubafashe Academy</a></li>
+                    <li><a href="support.html">Donate</a></li>
+                    <li><a href="partners.html">Our Partners</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Mission</h4>
+                <p>Nurturing children, empowering families, and strengthening community wellbeing.</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Creative Learning & Wellness Harmony Hub.</p>
+        </div>
+    </footer>
+
+    <!-- Link to external script -->
+    <script src="../script.js"></script>
+</body>
+</html>

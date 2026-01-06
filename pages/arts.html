@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ubuntu Arts & Culture | Rwanda</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        /* Specific Styles for Arts Page */
+        .arts-hero {
+            background-color: var(--arts-color); /* Purple */
+        }
+        .activity-card {
+            background: #fff;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-top: 4px solid var(--arts-color);
+        }
+        .booking-section {
+            background-color: #f4ecf7; /* Light Purple */
+            padding: 40px;
+            text-align: center;
+            border-radius: 15px;
+            margin-top: 50px;
+            border: 2px dashed var(--arts-color);
+        }
+        .list-check {
+            list-style: none;
+            padding: 0;
+        }
+        .list-check li {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+        }
+        .list-check li:before {
+            content: "✓";
+            color: var(--arts-color);
+            font-weight: bold;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVIGATION -->
+    <header>
+        <nav class="navbar">
+            <div class="logo"><a href="../index.html">Creative Learning & Wellness Harmony Hub</a></div>
+            <div class="menu-toggle" id="mobile-menu">☰</div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#" style="color: var(--accent-color);">Our Programs ▾</a>
+                    <div class="dropdown-content">
+                        <a href="school.html">Tubafashe Academy</a>
+                        <a href="wellness.html">Serenity Wellness</a>
+                        <a href="hydroponics.html">Cornucopia Hydroponics</a>
+                        <a href="arts.html" style="font-weight:bold;">Ubuntu Arts</a>
+                    </div>
+                </li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="partners.html">Partners</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="support.html">Support Us</a></li>
+                <li><a href="contact.html" class="btn">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero arts-hero">
+        <h1>Ubuntu Arts & Culture Foundation</h1>
+        <p>Healing, learning, and community connection through Sports and Creative Arts.</p>
+        <a href="#book-us" class="btn" style="background-color: var(--primary-color);">Book Our Troupe</a>
+    </section>
+
+    <!-- MAIN CONTENT -->
+    <section class="pillars">
+        
+        <!-- Intro -->
+        <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+            <p>At Ubuntu Arts, we believe that creativity and movement are essential for holistic wellbeing. Our activities nurture emotional expression, confidence, and teamwork.</p>
+            <p><strong>Led by:</strong> Gaby (Head of Ubuntu Arts & Culture)</p>
+        </div>
+
+        <!-- Activities Grid -->
+        <h2 class="section-title" style="margin-top: 50px;">Our Activities</h2>
+        <div class="grid-container">
+            
+            <!-- Sports -->
+            <div class="activity-card">
+                <h3 style="color: var(--arts-color);">🏀 Sports & Athletics</h3>
+                <p>Play and sports are prioritized to build physical health and discipline.</p>
+                <br>
+                <ul class="list-check">
+                    <li><strong>Basketball & Cycling:</strong> Our teams actively participate and win in local competitions.</li>
+                    <li>Volleyball</li>
+                    <li>Football</li>
+                </ul>
+            </div>
+
+            <!-- Creative Arts -->
+            <div class="activity-card">
+                <h3 style="color: var(--arts-color);">🎨 Creative Arts</h3>
+                <p>Arts are central to healing, confidence-building, and nurturing dreams.</p>
+                <br>
+                <ul class="list-check">
+                    <li>Visual Arts (Drawing & Painting)</li>
+                    <li>Poetry & Music</li>
+                    <li>Traditional & Modern Dance</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- Booking & Sales Section -->
+        <div id="book-us" class="booking-section">
+            <h2 style="color: var(--arts-color);">Support Our Talent</h2>
+            <p>Did you know you can support our students by hiring their talents?</p>
+            
+            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; margin-top: 30px;">
+                
+                <div style="flex: 1; min-width: 250px;">
+                    <h3>💃 Book the Troupe</h3>
+                    <p>Our traditional and modern dance troupes are available to perform at weddings, conferences, and community events.</p>
+                </div>
+
+                <div style="flex: 1; min-width: 250px;">
+                    <h3>🖼️ Buy Student Art</h3>
+                    <p>Purchase paintings and drawings created by our talented children. Proceeds go back to supporting their education.</p>
+                </div>
+            
+            </div>
+            
+            <br>
+            <a href="contact.html" class="btn" style="background-color: var(--arts-color);">Contact to Book / Buy</a>
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>Contact Ubuntu Arts</h4>
+                <p><strong>Phone:</strong> +250 788 305 007</p>
+                <p><strong>Location:</strong> Rwamagana Dist., Nyakariro Sector</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="school.html">Tubafashe Academy</a></li>
+                    <li><a href="hydroponics.html">Cornucopia Farm</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Connect</h4>
+                <p>Book our dancers for your next event!</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Creative Learning & Wellness Harmony Hub.</p>
+        </div>
+    </footer>
+
+    <!-- Link to external script -->
+    <script src="../script.js"></script>
+</body>
+</html>

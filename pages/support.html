@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support Us | Creative Learning Hub</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        /* Specific Styles for Support Page */
+        .support-hero {
+            background-color: var(--accent-color); /* Orange */
+        }
+        .donation-box {
+            background: #fff;
+            border: 2px solid #eee;
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 30px;
+            transition: transform 0.3s;
+        }
+        .donation-box:hover {
+            border-color: var(--accent-color);
+            transform: translateY(-5px);
+        }
+        .bank-details {
+            background: #f9f9f9;
+            padding: 20px;
+            border-left: 5px solid var(--primary-color);
+            font-family: monospace;
+            font-size: 1.1rem;
+            margin: 20px 0;
+        }
+        .copy-note {
+            font-size: 0.8rem;
+            color: #666;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVIGATION -->
+    <header>
+        <nav class="navbar">
+            <div class="logo"><a href="../index.html">Creative Learning & Wellness Harmony Hub</a></div>
+            <div class="menu-toggle" id="mobile-menu">☰</div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#" style="color: var(--accent-color);">Our Programs ▾</a>
+                    <div class="dropdown-content">
+                        <a href="school.html">Tubafashe Academy</a>
+                        <a href="wellness.html">Serenity Wellness</a>
+                        <a href="hydroponics.html">Cornucopia Hydroponics</a>
+                        <a href="arts.html">Ubuntu Arts</a>
+                    </div>
+                </li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="partners.html">Partners</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="support.html" style="font-weight:bold;">Support Us</a></li>
+                <li><a href="contact.html" class="btn">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero support-hero">
+        <h1>Make a Difference</h1>
+        <p>Your generosity helps us provide education, food, and emotional support to vulnerable children in Rwamagana.</p>
+    </section>
+
+    <!-- MAIN CONTENT -->
+    <section class="pillars">
+        
+        <!-- Impact Text -->
+        <div style="max-width: 800px; margin: 0 auto 50px; text-align: center;">
+            <h2 class="section-title">Why Donate?</h2>
+            <p>Around the world, millions of children grow up without a chance for good education. With your support, children from vulnerable families become stronger, overcome challenges, and build a happy future.</p>
+        </div>
+
+        <div class="grid-container">
+            
+            <!-- Option 1: Bank Transfer -->
+            <div class="donation-box">
+                <h3 style="color: var(--primary-color);">🏛️ Bank Transfer</h3>
+                <p>You can transfer funds directly to our school account in Rwanda.</p>
+                
+                <div class="bank-details">
+                    <strong>Bank:</strong> Banque Populaire du Rwanda (BPR)<br>
+                    <strong>Name:</strong> Tubafashe Academy School<br>
+                    <strong>Account No:</strong> 4493427663<br>
+                    <strong>Swift Code:</strong> BPRWRWRW<br>
+                    <strong>Currency:</strong> RWF
+                </div>
+                <p class="copy-note">Please include your name in the transfer description so we can thank you.</p>
+            </div>
+
+            <!-- Option 2: Mobile Money -->
+            <div class="donation-box">
+                <h3 style="color: var(--accent-color);">📱 Mobile Money (MoMo)</h3>
+                <p>Fast and secure donations via MTN Mobile Money.</p>
+                
+                <div style="background: #fff8e1; padding: 20px; border-radius: 5px; margin-top: 20px; text-align: center;">
+                    <p style="font-weight: bold; font-size: 1.2rem;">Code Coming Soon</p>
+                    <p style="font-size: 0.9rem;">Please contact our office to get the current MoMo number:</p>
+                    <a href="tel:+250788305007" style="color: var(--accent-color); font-weight: bold;">+250 788 305 007</a>
+                </div>
+            </div>
+
+            <!-- Option 3: Sponsor a Child -->
+            <div class="donation-box">
+                <h3 style="color: var(--farm-color);">🎓 Sponsor a Child</h3>
+                <p>Cover school fees, meals, and materials for one student for a year.</p>
+                <br>
+                <p>Sponsorship transforms lives directly. If you are interested in a long-term impact, please contact Dr. Chaste directly.</p>
+                <br>
+                <a href="contact.html" class="btn" style="background-color: var(--farm-color);">Contact to Sponsor</a>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>Contact Us</h4>
+                <p><strong>Phone:</strong> +250 788 305 007</p>
+                <p><strong>Location:</strong> Rwamagana Dist., Nyakariro Sector</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="school.html">Tubafashe Academy</a></li>
+                    <li><a href="partners.html">Our Partners</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Thank You</h4>
+                <p>Every contribution, no matter how small, builds a better future.</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Creative Learning & Wellness Harmony Hub.</p>
+        </div>
+    </footer>
+
+    <!-- Link to external script -->
+    <script src="../script.js"></script>
+</body>
+</html>

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Creative Learning Hub</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        /* Specific Styles for Contact Page */
+        .contact-hero {
+            background-color: var(--primary-color);
+        }
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            margin-top: 30px;
+        }
+        .contact-info {
+            background: #f9f9f9;
+            padding: 30px;
+            border-radius: 10px;
+        }
+        .info-item {
+            margin-bottom: 25px;
+        }
+        .info-item h4 {
+            color: var(--accent-color);
+            margin-bottom: 5px;
+        }
+        
+        /* Form Styles */
+        .contact-form {
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: inherit;
+        }
+        .submit-btn {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            width: 100%;
+        }
+        .submit-btn:hover {
+            opacity: 0.9;
+        }
+
+        /* Map Placeholder */
+        .map-container {
+            width: 100%;
+            height: 400px;
+            margin-top: 50px;
+            background-color: #eee;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        @media (max-width: 768px) {
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVIGATION -->
+    <header>
+        <nav class="navbar">
+            <div class="logo"><a href="../index.html">Creative Learning & Wellness Harmony Hub</a></div>
+            <div class="menu-toggle" id="mobile-menu">☰</div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#" style="color: var(--accent-color);">Our Programs ▾</a>
+                    <div class="dropdown-content">
+                        <a href="school.html">Tubafashe Academy</a>
+                        <a href="wellness.html">Serenity Wellness</a>
+                        <a href="hydroponics.html">Cornucopia Hydroponics</a>
+                        <a href="arts.html">Ubuntu Arts</a>
+                    </div>
+                </li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="partners.html">Partners</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="support.html">Support Us</a></li>
+                <li><a href="contact.html" style="font-weight:bold;">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero contact-hero">
+        <h1>Contact Us</h1>
+        <p>We are here to answer your questions and welcome you to our community.</p>
+    </section>
+
+    <!-- MAIN CONTENT -->
+    <section class="pillars">
+        
+        <div class="contact-container">
+            
+            <!-- Left Side: Contact Info -->
+            <div class="contact-info">
+                <div class="info-item">
+                    <h4>📍 Location</h4>
+                    <p>Rwamagana District, Nyakariro Sector</p>
+                    <p>Gishore Cell, Matyazo Village</p>
+                    <p><em>Landmark: Near GS Matyazo</em></p>
+                </div>
+
+                <div class="info-item">
+                    <h4>📞 Phone & WhatsApp</h4>
+                    <p><a href="tel:+250788305007">+250 788 305 007</a></p>
+                </div>
+
+                <div class="info-item">
+                    <h4>🕒 Office Hours</h4>
+                    <p>Monday - Friday: 8:00 AM - 5:00 PM</p>
+                    <p>Weekend: Closed (except for scheduled events)</p>
+                </div>
+
+                <div class="info-item">
+                    <h4>✉️ Email</h4>
+                    <p>uwichaste@yahoo.fr</p>
+                </div>
+            </div>
+
+            <!-- Right Side: Contact Form -->
+            <div class="contact-form">
+                <h3>Send us a Message</h3>
+                
+                <!-- IMPORTANT: 'data-netlify="true"' makes this work on Netlify! -->
+                <form name="contact" method="POST" data-netlify="true">
+                    
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required placeholder="name@example.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number (Optional)</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+250...">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required placeholder="How can we help you?"></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+
+        </div>
+
+        <!-- Map Section -->
+        <!-- Since we don't have a specific pin yet, this map points to the general Nyakariro Sector -->
+        <div class="map-container">
+            <iframe 
+                width="100%" 
+                height="100%" 
+                frameborder="0" 
+                scrolling="no" 
+                marginheight="0" 
+                marginwidth="0" 
+                src="https://www.openstreetmap.org/export/embed.html?bbox=30.3%2C-2.0%2C30.5%2C-1.9&amp;layer=mapnik&amp;marker=-1.95%2C30.4" 
+                style="border: 1px solid black">
+            </iframe>
+        </div>
+        <p style="text-align: center; margin-top: 10px; font-size: 0.9rem;">
+            <small><a href="https://www.openstreetmap.org" target="_blank">View Larger Map</a></small>
+        </p>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>Contact Us</h4>
+                <p><strong>Phone:</strong> +250 788 305 007</p>
+                <p><strong>Location:</strong> Rwamagana Dist., Nyakariro Sector</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="school.html">Tubafashe Academy</a></li>
+                    <li><a href="support.html">Donate</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Admin Access</h4>
+                <p>Staff Login (Coming Soon)</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Creative Learning & Wellness Harmony Hub.</p>
+        </div>
+    </footer>
+
+    <!-- Link to external script -->
+    <script src="../script.js"></script>
+</body>
+</html>

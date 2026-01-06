@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Partners | Creative Learning Hub</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        /* Specific Styles for Partners Page */
+        .partners-hero {
+            background-color: var(--primary-color);
+        }
+        .partner-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .partner-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .partner-logo {
+            width: 150px;
+            height: 150px;
+            object-fit: contain;
+            margin-bottom: 20px;
+            /* Gray placeholder background - remove this line when you have real logos */
+            background-color: #f4f6f7; 
+            border-radius: 50%;
+            padding: 10px;
+        }
+        .cta-section {
+            text-align: center;
+            background-color: var(--light-bg);
+            padding: 60px 20px;
+            margin-top: 50px;
+            border-top: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVIGATION -->
+    <header>
+        <nav class="navbar">
+            <div class="logo"><a href="../index.html">CLWH Hub</a></div>
+            <div class="menu-toggle" id="mobile-menu">☰</div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#" style="color: var(--accent-color);">Our Programs ▾</a>
+                    <div class="dropdown-content">
+                        <a href="school.html">Tubafashe Academy</a>
+                        <a href="wellness.html">Serenity Wellness</a>
+                        <a href="hydroponics.html">Cornucopia Hydroponics</a>
+                        <a href="arts.html">Ubuntu Arts</a>
+                    </div>
+                </li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="partners.html" style="font-weight:bold;">Partners</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="support.html">Support Us</a></li>
+                <li><a href="contact.html" class="btn">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero partners-hero">
+        <h1>Our Partners</h1>
+        <p>We believe that working with other stakeholders is the key to success and sustainability.</p>
+    </section>
+
+    <!-- MAIN CONTENT -->
+    <section class="pillars">
+        
+        <h2 class="section-title">Strategic Partners</h2>
+        <div class="grid-container">
+            
+            <!-- Partner 1 -->
+            <div class="partner-card">
+                <!-- Replace src with real logo -->
+                <img src="https://via.placeholder.com/150x150?text=UNM" alt="UYISENGA NI IMANZI" class="partner-logo">
+                <h3>UYISENGA NI IMANZI</h3>
+                <p>A leading Rwandan organization implementing child and youth-focused programs.</p>
+            </div>
+
+            <!-- Partner 2 -->
+            <div class="partner-card">
+                <img src="https://via.placeholder.com/150x150?text=Maison" alt="Une Maison des Sourires" class="partner-logo">
+                <h3>Une Maison des Sourires</h3>
+                <p>Focused on providing housing and support for vulnerable children.</p>
+            </div>
+
+            <!-- Partner 3 -->
+            <div class="partner-card">
+                <img src="https://via.placeholder.com/150x150?text=St.+Joseph" alt="St. Joseph School" class="partner-logo">
+                <h3>St. Joseph School (Canada)</h3>
+                <p>Our international academic partner fostering global exchange and learning.</p>
+            </div>
+
+            <!-- Partner 4 -->
+            <div class="partner-card">
+                <img src="https://via.placeholder.com/150x150?text=Lund" alt="School of Lund" class="partner-logo">
+                <h3>School of Lund (Sweden)</h3>
+                <p>Supporting educational development and cross-cultural connection.</p>
+            </div>
+
+            <!-- Partner 5 -->
+            <div class="partner-card">
+                <img src="https://via.placeholder.com/150x150?text=Cornucopia" alt="Cornucopia Foundation" class="partner-logo">
+                <h3>Cornucopia Foundation</h3>
+                <p>The driving force behind our Hydroponics and sustainable nutrition initiatives.</p>
+            </div>
+
+            <!-- Partner 6 -->
+            <div class="partner-card">
+                <img src="https://via.placeholder.com/150x150?text=REAP" alt="REAP" class="partner-logo">
+                <h3>REAP</h3>
+                <p>Rwanda Education Assistance Project, dedicated to enhancing rural education.</p>
+            </div>
+
+        </div>
+
+        <!-- Become a Partner Section -->
+        <div class="cta-section">
+            <h2>Partner With Us</h2>
+            <p style="max-width: 600px; margin: 20px auto;">Do you want to join our mission to empower children and families in Rwamagana? We are always looking for organizations and individuals to collaborate with.</p>
+            <a href="contact.html" class="btn">Get in Touch</a>
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>Contact Us</h4>
+                <p><strong>Phone:</strong> +250 788 305 007</p>
+                <p><strong>Location:</strong> Rwamagana Dist., Nyakariro Sector</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="school.html">Tubafashe Academy</a></li>
+                    <li><a href="support.html">Donate</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Our Network</h4>
+                <p>Proudly collaborating with partners in Rwanda, Canada, Sweden, and France.</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Creative Learning & Wellness Harmony Hub.</p>
+        </div>
+    </footer>
+
+    <!-- Link to external script -->
+    <script src="../script.js"></script>
+</body>
+</html>
