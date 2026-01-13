@@ -3,66 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ubuntu Arts & Culture | Rwanda</title>
+    <title>Ubuntu Arts & Culture | Creative Learning Hub</title>
+    
+    <!-- CSS, Fonts, Icons -->
     <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <style>
-        /* Specific Styles for Arts Page */
-        .arts-hero {
-            background-color: var(--arts-color); /* Purple */
-        }
-        .activity-card {
-            background: #fff;
-            padding: 25px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            border-top: 4px solid var(--arts-color);
-        }
+        /* Specific Styles for Booking Section */
         .booking-section {
-            background-color: #f4ecf7; /* Light Purple */
-            padding: 40px;
+            background: linear-gradient(135deg, #f3e5f5, #e1bee7);
+            padding: 50px;
+            border-radius: 20px;
             text-align: center;
+            margin-top: 60px;
+            box-shadow: 0 10px 30px rgba(142, 68, 173, 0.15);
+            border: 1px solid rgba(255,255,255,0.5);
+        }
+        .booking-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+            margin-top: 30px;
+        }
+        .booking-card {
+            background: white;
+            padding: 30px;
             border-radius: 15px;
-            margin-top: 50px;
-            border: 2px dashed var(--arts-color);
+            flex: 1;
+            min-width: 280px;
+            max-width: 400px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
         }
-        .list-check {
-            list-style: none;
-            padding: 0;
-        }
-        .list-check li {
-            padding: 8px 0;
-            border-bottom: 1px solid #eee;
-        }
-        .list-check li:before {
-            content: "✓";
-            color: var(--arts-color);
-            font-weight: bold;
-            margin-right: 10px;
-        }
+        .booking-card:hover { transform: translateY(-5px); }
     </style>
 </head>
 <body>
 
-    <!-- NAVIGATION -->
+    <!-- MODERN HEADER -->
     <header>
         <nav class="navbar">
-            <div class="logo"><a href="../index.html">Creative Learning & Wellness Harmony Hub</a></div>
-            <div class="menu-toggle" id="mobile-menu">☰</div>
+            <div class="logo"><a href="../index.html">CLWH <span>Hub</span></a></div>
+            <div class="menu-toggle" id="mobile-menu"><i class="fas fa-bars"></i></div>
             <ul class="nav-links">
                 <li><a href="../index.html">Home</a></li>
                 <li class="dropdown">
-                    <a href="#" style="color: var(--accent-color);">Our Programs ▾</a>
+                    <a href="#" style="color: var(--accent);">Our Programs <i class="fas fa-chevron-down" style="font-size: 0.8rem;"></i></a>
                     <div class="dropdown-content">
-                        <a href="school.html">Tubafashe Academy</a>
-                        <a href="wellness.html">Serenity Wellness</a>
-                        <a href="hydroponics.html">Cornucopia Hydroponics</a>
-                        <a href="arts.html" style="font-weight:bold;">Ubuntu Arts</a>
+                        <a href="school.html"><i class="fas fa-graduation-cap"></i> Tubafashe Academy</a>
+                        <a href="wellness.html"><i class="fas fa-heart"></i> Serenity Wellness</a>
+                        <a href="hydroponics.html"><i class="fas fa-leaf"></i> Cornucopia Farm</a>
+                        <a href="arts.html" style="background:#f0f0f0; color:var(--accent);"><i class="fas fa-palette"></i> Ubuntu Arts</a>
                     </div>
                 </li>
-                <li><a href="about.html">About Us</a></li>
+                <li><a href="about.html">About</a></li>
                 <li><a href="partners.html">Partners</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="support.html">Support Us</a></li>
+                <li><a href="support.html">Donate</a></li>
                 <li><a href="contact.html" class="btn">Contact</a></li>
             </ul>
         </nav>
@@ -70,9 +70,9 @@
 
     <!-- HERO SECTION -->
     <section class="hero arts-hero">
-        <h1>Ubuntu Arts & Culture Foundation</h1>
+        <h1>Ubuntu Arts & Culture</h1>
         <p>Healing, learning, and community connection through Sports and Creative Arts.</p>
-        <a href="#book-us" class="btn" style="background-color: var(--primary-color);">Book Our Troupe</a>
+        <a href="#book-us" class="btn" style="background: var(--primary-dark);">Book Our Troupe</a>
     </section>
 
     <!-- MAIN CONTENT -->
@@ -80,61 +80,68 @@
         
         <!-- Intro -->
         <div style="max-width: 800px; margin: 0 auto; text-align: center;">
-            <p>At Ubuntu Arts, we believe that creativity and movement are essential for holistic wellbeing. Our activities nurture emotional expression, confidence, and teamwork.</p>
-            <p><strong>Led by:</strong> Gaby (Head of Ubuntu Arts & Culture)</p>
+            <p style="font-size: 1.1rem;">Creativity and movement are essential for holistic wellbeing. Led by <strong>Gaby</strong>, our programs nurture emotional expression, confidence, and teamwork.</p>
         </div>
 
         <!-- Activities Grid -->
-        <h2 class="section-title" style="margin-top: 50px;">Our Activities</h2>
+        <h2 class="section-title" style="margin-top: 60px;">Our Activities</h2>
         <div class="grid-container">
             
             <!-- Sports -->
-            <div class="activity-card">
-                <h3 style="color: var(--arts-color);">🏀 Sports & Athletics</h3>
-                <p>Play and sports are prioritized to build physical health and discipline.</p>
-                <br>
-                <ul class="list-check">
-                    <li><strong>Basketball & Cycling:</strong> Our teams actively participate and win in local competitions.</li>
-                    <li>Volleyball</li>
-                    <li>Football</li>
-                </ul>
+            <div class="card">
+                <!-- Unsplash: Basketball/Sports -->
+                <img src="https://images.unsplash.com/photo-1546519638-68e109498ad0?auto=format&fit=crop&w=800&q=80" alt="Sports" class="card-img">
+                <div class="card-content">
+                    <h3><i class="fas fa-running"></i> Sports & Athletics</h3>
+                    <p>Building physical health and discipline through active competition.</p>
+                    <ul style="margin-top: 15px; color: #555;">
+                        <li><i class="fas fa-check" style="color:var(--accent);"></i> <strong>Cycling & Basketball:</strong> Winning local competitions.</li>
+                        <li><i class="fas fa-check" style="color:var(--accent);"></i> Volleyball</li>
+                        <li><i class="fas fa-check" style="color:var(--accent);"></i> Football Academy</li>
+                    </ul>
+                </div>
             </div>
 
             <!-- Creative Arts -->
-            <div class="activity-card">
-                <h3 style="color: var(--arts-color);">🎨 Creative Arts</h3>
-                <p>Arts are central to healing, confidence-building, and nurturing dreams.</p>
-                <br>
-                <ul class="list-check">
-                    <li>Visual Arts (Drawing & Painting)</li>
-                    <li>Poetry & Music</li>
-                    <li>Traditional & Modern Dance</li>
-                </ul>
+            <div class="card">
+                <!-- Unsplash: Dance/Performance -->
+                <img src="https://images.unsplash.com/photo-1508700929628-666bc8bd84ea?auto=format&fit=crop&w=800&q=80" alt="Creative Arts" class="card-img">
+                <div class="card-content">
+                    <h3><i class="fas fa-music"></i> Creative Arts</h3>
+                    <p>Central to healing, confidence-building, and nurturing dreams.</p>
+                    <ul style="margin-top: 15px; color: #555;">
+                        <li><i class="fas fa-check" style="color:var(--accent);"></i> Visual Arts (Drawing & Painting)</li>
+                        <li><i class="fas fa-check" style="color:var(--accent);"></i> Poetry & Music</li>
+                        <li><i class="fas fa-check" style="color:var(--accent);"></i> Traditional & Modern Dance</li>
+                    </ul>
+                </div>
             </div>
 
         </div>
 
-        <!-- Booking & Sales Section -->
+        <!-- Booking & Sales Section (The "Make Money" Section) -->
         <div id="book-us" class="booking-section">
-            <h2 style="color: var(--arts-color);">Support Our Talent</h2>
-            <p>Did you know you can support our students by hiring their talents?</p>
+            <h2 style="color: #8e44ad; font-family: 'Poppins', sans-serif;">Support Our Talent</h2>
+            <p style="max-width: 600px; margin: 0 auto 30px;">Did you know you can support our students by hiring their talents? All proceeds go back into their education.</p>
             
-            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; margin-top: 30px;">
+            <div class="booking-grid">
                 
-                <div style="flex: 1; min-width: 250px;">
-                    <h3>💃 Book the Troupe</h3>
-                    <p>Our traditional and modern dance troupes are available to perform at weddings, conferences, and community events.</p>
+                <div class="booking-card">
+                    <i class="fas fa-users" style="font-size: 2.5rem; color: #8e44ad; margin-bottom: 15px;"></i>
+                    <h3>Book the Troupe</h3>
+                    <p>Our award-winning traditional and modern dance troupes are available for weddings, conferences, and events.</p>
                 </div>
 
-                <div style="flex: 1; min-width: 250px;">
-                    <h3>🖼️ Buy Student Art</h3>
-                    <p>Purchase paintings and drawings created by our talented children. Proceeds go back to supporting their education.</p>
+                <div class="booking-card">
+                    <i class="fas fa-palette" style="font-size: 2.5rem; color: #8e44ad; margin-bottom: 15px;"></i>
+                    <h3>Buy Student Art</h3>
+                    <p>Purchase original paintings and drawings created by our talented children. A perfect gift with a story.</p>
                 </div>
             
             </div>
             
             <br>
-            <a href="contact.html" class="btn" style="background-color: var(--arts-color);">Contact to Book / Buy</a>
+            <a href="contact.html" class="btn" style="background: #8e44ad; margin-top: 20px;">Contact to Book / Buy</a>
         </div>
 
     </section>
@@ -144,8 +151,10 @@
         <div class="footer-grid">
             <div class="footer-col">
                 <h4>Contact Ubuntu Arts</h4>
-                <p><strong>Phone:</strong> +250 788 305 007</p>
-                <p><strong>Location:</strong> Rwamagana Dist., Nyakariro Sector</p>
+                <ul>
+                    <li><i class="fab fa-whatsapp"></i> +250 788 305 007</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Rwamagana Dist., Nyakariro</li>
+                </ul>
             </div>
             <div class="footer-col">
                 <h4>Quick Links</h4>
@@ -156,8 +165,8 @@
                 </ul>
             </div>
             <div class="footer-col">
-                <h4>Connect</h4>
-                <p>Book our dancers for your next event!</p>
+                <h4>Book Us</h4>
+                <p>Add a cultural touch to your next event with our dance troupe!</p>
             </div>
         </div>
         <div class="footer-bottom">
@@ -165,7 +174,6 @@
         </div>
     </footer>
 
-    <!-- Link to external script -->
     <script src="../script.js"></script>
 </body>
 </html>

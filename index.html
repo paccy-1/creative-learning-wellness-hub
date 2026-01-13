@@ -4,38 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Creative Learning & Wellness Harmony Hub | Rwanda</title>
+    
+    <!-- 1. Link to your CSS -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- 2. Google Fonts (Poppins & Open Sans) -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- 3. FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-    <!-- NAVIGATION -->
+    <!-- MODERN HEADER -->
     <header>
         <nav class="navbar">
-            <div class="logo">The Creative Learning & Wellness Harmony Hub</div>
-            <div class="menu-toggle" id="mobile-menu">☰</div>
+            <!-- Logo -->
+            <div class="logo">CLWH <span>Hub</span></div>
+            
+            <!-- Mobile Menu Icon -->
+            <div class="menu-toggle" id="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+            
+            <!-- Navigation Links -->
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
+                
                 <li class="dropdown">
-                    <a href="#">Our Programs ▾</a>
+                    <a href="#">Our Programs <i class="fas fa-chevron-down" style="font-size: 0.8rem; margin-left:5px;"></i></a>
                     <div class="dropdown-content">
-                        <a href="pages/school.html">Tubafashe Academy</a>
-                        <a href="pages/wellness.html">Serenity Wellness</a>
-                        <a href="pages/hydroponics.html">Cornucopia Hydroponics</a>
-                        <a href="pages/arts.html">Ubuntu Arts</a>
+                        <a href="pages/school.html"><i class="fas fa-graduation-cap"></i> Tubafashe Academy</a>
+                        <a href="pages/wellness.html"><i class="fas fa-heart"></i> Serenity Wellness</a>
+                        <a href="pages/hydroponics.html"><i class="fas fa-leaf"></i> Cornucopia Farm</a>
+                        <a href="pages/arts.html"><i class="fas fa-palette"></i> Ubuntu Arts</a>
                     </div>
                 </li>
-                <li><a href="pages/about.html">About Us</a></li>
+                
+                <li><a href="pages/about.html">About</a></li>
                 <li><a href="pages/partners.html">Partners</a></li>
                 <li><a href="pages/gallery.html">Gallery</a></li>
-                <li><a href="pages/support.html">Support Us</a></li>
-                <li><a href="pages/contact.html" class="btn">Contact</a></li>
+                <li><a href="pages/support.html">Donate</a></li>
+                <li><a href="pages/contact.html" class="btn">Contact Us</a></li>
             </ul>
         </nav>
     </header>
 
     <!-- HERO SECTION -->
     <section class="hero">
-        <h1>The Creative Learning & Wellness Harmony Hub</h1>
+        <h1>The Creative Learning &<br>Wellness Harmony Hub</h1>
         <p>Nurturing children, empowering families, and strengthening community wellbeing in Rwamagana, Rwanda.</p>
         <a href="pages/support.html" class="btn">Support Our Mission</a>
     </section>
@@ -47,38 +64,41 @@
             
             <!-- Pillar 1: School -->
             <div class="card">
-                <!-- Replace src with your real image later -->
-                <img src="https://via.placeholder.com/400x250/3498DB/ffffff?text=Tubafashe+Academy" alt="Tubafashe Academy" class="card-img">
+                <!-- Unsplash Image: Education -->
+                <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=800&q=80" alt="Tubafashe Academy" class="card-img">
                 <div class="card-content">
                     <h3>Tubafashe Academy</h3>
-                    <p>Providing quality bilingual education (Nursery & Primary) with care and affection.</p>
+                    <p>Providing quality bilingual education (Nursery & Primary) with care, affection, and academic excellence.</p>
                     <a href="pages/school.html" class="card-btn school-btn">Visit School</a>
                 </div>
             </div>
 
             <!-- Pillar 2: Wellness -->
             <div class="card">
-                <img src="https://via.placeholder.com/400x250/1ABC9C/ffffff?text=Wellness+Oasis" alt="Serenity Wellness Oasis" class="card-img">
+                <!-- Unsplash Image: Wellness/Nature -->
+                <img src="https://images.unsplash.com/photo-1544367563-12123d8966cd?auto=format&fit=crop&w=800&q=80" alt="Serenity Wellness Oasis" class="card-img">
                 <div class="card-content">
                     <h3>Serenity Wellness Oasis</h3>
-                    <p>Emotional and psychological support for children, parents, and the community.</p>
+                    <p>Emotional and psychological support for children, parents, and the community in a safe environment.</p>
                     <a href="pages/wellness.html" class="card-btn wellness-btn">Visit Wellness Center</a>
                 </div>
             </div>
 
             <!-- Pillar 3: Farming -->
             <div class="card">
-                <img src="https://via.placeholder.com/400x250/27AE60/ffffff?text=Hydroponics+Farm" alt="Cornucopia Hydroponics" class="card-img">
+                <!-- Unsplash Image: Hydroponics/Plants -->
+                <img src="https://images.unsplash.com/photo-1530836369250-ef72a3f5cda8?auto=format&fit=crop&w=800&q=80" alt="Cornucopia Hydroponics" class="card-img">
                 <div class="card-content">
                     <h3>Cornucopia Hydroponics</h3>
-                    <p>Innovative soilless farming teaching sustainable nutrition and food security.</p>
+                    <p>Innovative soilless farming teaching sustainable nutrition, food security, and modern agriculture.</p>
                     <a href="pages/hydroponics.html" class="card-btn farm-btn">Visit Farm</a>
                 </div>
             </div>
 
             <!-- Pillar 4: Arts -->
             <div class="card">
-                <img src="https://via.placeholder.com/400x250/9B59B6/ffffff?text=Ubuntu+Arts" alt="Ubuntu Arts & Culture" class="card-img">
+                <!-- Unsplash Image: Arts/Painting -->
+                <img src="https://images.unsplash.com/photo-1502680390469-be75c86b636f?auto=format&fit=crop&w=800&q=80" alt="Ubuntu Arts & Culture" class="card-img">
                 <div class="card-content">
                     <h3>Ubuntu Arts & Culture</h3>
                     <p>Healing and connection through sports, dance, painting, and creative expression.</p>
@@ -94,9 +114,11 @@
         <div class="footer-grid">
             <div class="footer-col">
                 <h4>Contact Us</h4>
-                <p><strong>Phone/WhatsApp:</strong><br>+250 788 305 007</p>
-                <br>
-                <p><strong>Location:</strong><br>Rwamagana Dist., Nyakariro Sector<br>Gishore Cell, Matyazo Village</p>
+                <ul style="opacity: 0.8;">
+                    <li><i class="fab fa-whatsapp"></i> +250 788 305 007</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Rwamagana Dist., Nyakariro Sector</li>
+                    <li><i class="fas fa-home"></i> Gishore Cell, Matyazo Village</li>
+                </ul>
             </div>
             <div class="footer-col">
                 <h4>Quick Links</h4>
@@ -108,16 +130,10 @@
             </div>
             <div class="footer-col">
                 <h4>Legal</h4>
-                <p>Registered in Rwanda.</p>
-                <p>Accredited by MINEDUC.</p>
+                <p style="opacity: 0.8;">Registered in Rwanda.<br>Accredited by MINEDUC.</p>
             </div>
         </div>
         <div class="footer-bottom">
             <p>&copy; 2025 Creative Learning & Wellness Harmony Hub. All Rights Reserved.</p>
         </div>
-    </footer>
-
-    <!-- MOBILE SCRIPT -->
-<script src="script.js"></script>
-</body>
-</html>
+    </foote

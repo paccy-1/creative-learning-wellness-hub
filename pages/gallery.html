@@ -3,92 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Photo Gallery | Creative Learning Hub</title>
+    <title>Gallery | Creative Learning Hub</title>
+    
+    <!-- CSS, Fonts, Icons -->
     <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <style>
-        /* Specific Styles for Gallery Page */
-        .gallery-hero {
-            background-color: var(--primary-color);
-        }
-        
-        /* Filter Buttons */
+        /* Specific Gallery Styles */
         .filter-container {
-            text-align: center;
-            margin: 40px 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 50px;
         }
         .filter-btn {
-            background: #eee;
-            border: none;
-            padding: 10px 20px;
-            margin: 5px;
+            background: white;
+            border: 2px solid #eee;
+            padding: 10px 25px;
+            border-radius: 50px;
             cursor: pointer;
-            border-radius: 20px;
-            font-weight: bold;
-            transition: 0.3s;
+            font-weight: 600;
+            font-family: 'Poppins', sans-serif;
+            transition: all 0.3s ease;
+            color: #555;
         }
-        .filter-btn:hover, .filter-btn.active {
-            background-color: var(--accent-color);
+        .filter-btn:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+            transform: translateY(-2px);
+        }
+        .filter-btn.active {
+            background: var(--accent);
             color: white;
+            border-color: var(--accent);
+            box-shadow: 0 5px 15px rgba(230, 126, 34, 0.3);
         }
 
         /* Gallery Grid */
         .gallery-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 15px;
-            padding: 0 20px;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
         }
         .gallery-item {
             position: relative;
-            overflow: hidden;
-            border-radius: 8px;
             height: 250px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            cursor: pointer;
         }
         .gallery-item img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: transform 0.3s ease;
+            transition: transform 0.5s ease;
         }
         .gallery-item:hover img {
-            transform: scale(1.05);
+            transform: scale(1.1); /* Zoom effect */
+        }
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+            padding: 20px;
+            opacity: 0;
+            transition: 0.3s;
+        }
+        .gallery-item:hover .gallery-overlay { opacity: 1; }
+        .gallery-overlay span {
+            color: white;
+            font-weight: bold;
+            font-size: 0.9rem;
         }
         
         /* Hidden class for filtering */
-        .gallery-item.hide {
-            display: none;
-        }
+        .gallery-item.hide { display: none; }
     </style>
 </head>
 <body>
 
-    <!-- NAVIGATION -->
+    <!-- MODERN HEADER -->
     <header>
         <nav class="navbar">
-            <div class="logo"><a href="../index.html">Creative Learning & Wellness Harmony Hub</a></div>
-            <div class="menu-toggle" id="mobile-menu">☰</div>
+            <div class="logo"><a href="../index.html">CLWH <span>Hub</span></a></div>
+            <div class="menu-toggle" id="mobile-menu"><i class="fas fa-bars"></i></div>
             <ul class="nav-links">
                 <li><a href="../index.html">Home</a></li>
                 <li class="dropdown">
-                    <a href="#" style="color: var(--accent-color);">Our Programs ▾</a>
+                    <a href="#" style="color: var(--accent);">Our Programs <i class="fas fa-chevron-down" style="font-size: 0.8rem;"></i></a>
                     <div class="dropdown-content">
-                        <a href="school.html">Tubafashe Academy</a>
-                        <a href="wellness.html">Serenity Wellness</a>
-                        <a href="hydroponics.html">Cornucopia Hydroponics</a>
-                        <a href="arts.html">Ubuntu Arts</a>
+                        <a href="school.html"><i class="fas fa-graduation-cap"></i> Tubafashe Academy</a>
+                        <a href="wellness.html"><i class="fas fa-heart"></i> Serenity Wellness</a>
+                        <a href="hydroponics.html"><i class="fas fa-leaf"></i> Cornucopia Farm</a>
+                        <a href="arts.html"><i class="fas fa-palette"></i> Ubuntu Arts</a>
                     </div>
                 </li>
-                <li><a href="about.html">About Us</a></li>
+                <li><a href="about.html">About</a></li>
                 <li><a href="partners.html">Partners</a></li>
-                <li><a href="gallery.html" style="font-weight:bold;">Gallery</a></li>
-                <li><a href="support.html">Support Us</a></li>
+                <li><a href="gallery.html" style="background:#f0f0f0; color:var(--accent);">Gallery</a></li>
+                <li><a href="support.html">Donate</a></li>
                 <li><a href="contact.html" class="btn">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <!-- HERO SECTION -->
-    <section class="hero gallery-hero">
+    <section class="hero" style="background: linear-gradient(135deg, #8e44ad, #3498db);">
         <h1>Our Gallery</h1>
         <p>A visual journey through our activities, growth, and community impact.</p>
     </section>
@@ -108,33 +134,40 @@
         <!-- The Photo Grid -->
         <div class="gallery-grid">
             
-            <!-- 1. School Photos (Class="school") -->
+            <!-- SCHOOL PHOTOS -->
             <div class="gallery-item school">
-                <img src="https://via.placeholder.com/300?text=Classroom" alt="Classroom">
+                <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=600&q=80" alt="Classroom">
+                <div class="gallery-overlay"><span>Classroom Learning</span></div>
             </div>
             <div class="gallery-item school">
-                <img src="https://via.placeholder.com/300?text=Graduation" alt="Graduation">
+                <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=600&q=80" alt="Graduation">
+                <div class="gallery-overlay"><span>Graduation Day</span></div>
             </div>
 
-            <!-- 2. Farm Photos (Class="farm") -->
+            <!-- FARM PHOTOS -->
             <div class="gallery-item farm">
-                <img src="https://via.placeholder.com/300/27AE60/ffffff?text=Hydroponics+System" alt="Farm">
+                <img src="https://images.unsplash.com/photo-1530836369250-ef72a3f5cda8?auto=format&fit=crop&w=600&q=80" alt="Hydroponics">
+                <div class="gallery-overlay"><span>Hydroponic System</span></div>
             </div>
             <div class="gallery-item farm">
-                <img src="https://via.placeholder.com/300/27AE60/ffffff?text=Harvesting" alt="Harvest">
+                <img src="https://images.unsplash.com/photo-1622383563227-044011358d16?auto=format&fit=crop&w=600&q=80" alt="Harvest">
+                <div class="gallery-overlay"><span>Students Harvesting</span></div>
             </div>
 
-            <!-- 3. Arts Photos (Class="arts") -->
+            <!-- ARTS PHOTOS -->
             <div class="gallery-item arts">
-                <img src="https://via.placeholder.com/300/9B59B6/ffffff?text=Traditional+Dance" alt="Dance">
+                <img src="https://images.unsplash.com/photo-1508700929628-666bc8bd84ea?auto=format&fit=crop&w=600&q=80" alt="Dance">
+                <div class="gallery-overlay"><span>Traditional Dance</span></div>
             </div>
             <div class="gallery-item arts">
-                <img src="https://via.placeholder.com/300/9B59B6/ffffff?text=Painting+Class" alt="Art">
+                <img src="https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?auto=format&fit=crop&w=600&q=80" alt="Art">
+                <div class="gallery-overlay"><span>Creative Arts Class</span></div>
             </div>
             
-            <!-- 4. Wellness Photos (Class="wellness") -->
+            <!-- WELLNESS PHOTOS -->
             <div class="gallery-item wellness">
-                <img src="https://via.placeholder.com/300/1ABC9C/ffffff?text=Counseling+Session" alt="Counseling">
+                <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=600&q=80" alt="Counseling">
+                <div class="gallery-overlay"><span>Counseling Session</span></div>
             </div>
 
         </div>
@@ -146,8 +179,10 @@
         <div class="footer-grid">
             <div class="footer-col">
                 <h4>Contact Us</h4>
-                <p><strong>Phone:</strong> +250 788 305 007</p>
-                <p><strong>Location:</strong> Rwamagana Dist., Nyakariro Sector</p>
+                <ul>
+                    <li><i class="fab fa-whatsapp"></i> +250 788 305 007</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Rwamagana Dist., Nyakariro</li>
+                </ul>
             </div>
             <div class="footer-col">
                 <h4>Quick Links</h4>
@@ -158,7 +193,7 @@
             </div>
             <div class="footer-col">
                 <h4>Follow Us</h4>
-                <p>See more updates on our social media.</p>
+                <p>Check back soon for more updates from our community.</p>
             </div>
         </div>
         <div class="footer-bottom">
@@ -166,10 +201,10 @@
         </div>
     </footer>
 
-    <!-- Link to external script -->
+    <!-- EXTERNAL SCRIPT (Menu) -->
     <script src="../script.js"></script>
 
-    <!-- Internal Script for Filtering (Only needed on this page) -->
+    <!-- INTERNAL SCRIPT (Filtering) -->
     <script>
         function filterGallery(category) {
             // 1. Remove active class from all buttons

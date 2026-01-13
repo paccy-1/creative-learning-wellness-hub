@@ -3,52 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Serenity Wellness Oasis | Rwanda</title>
+    <title>Serenity Wellness | Creative Learning Hub</title>
+    
+    <!-- CSS, Fonts, Icons -->
     <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <style>
-        /* Specific Styles for Wellness Page */
-        .wellness-hero {
-            background-color: var(--wellness-color); /* Teal Color */
+        /* Special "Walk-in" Banner */
+        .walk-in-banner {
+            background: #e0f2f1;
+            border-left: 5px solid #009688;
+            padding: 25px;
+            border-radius: 8px;
+            margin: 30px auto;
+            max-width: 800px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
         }
-        .service-icon {
-            font-size: 2rem;
-            margin-bottom: 15px;
-            color: var(--wellness-color);
-        }
-        .open-hours-banner {
-            background-color: #d1f2eb;
-            border: 2px solid var(--wellness-color);
-            color: #0e6655;
-            padding: 20px;
-            text-align: center;
-            border-radius: 10px;
-            margin: 30px 0;
-            font-weight: bold;
+        .banner-icon { font-size: 2rem; color: #009688; }
+        
+        @media (max-width: 768px) {
+            .walk-in-banner { flex-direction: column; text-align: center; }
         }
     </style>
 </head>
 <body>
 
-    <!-- NAVIGATION -->
+    <!-- MODERN HEADER -->
     <header>
         <nav class="navbar">
-            <div class="logo"><a href="../index.html">Creative Learning & Wellness Harmony Hub</a></div>
-            <div class="menu-toggle" id="mobile-menu">☰</div>
+            <div class="logo"><a href="../index.html">CLWH <span>Hub</span></a></div>
+            <div class="menu-toggle" id="mobile-menu"><i class="fas fa-bars"></i></div>
             <ul class="nav-links">
                 <li><a href="../index.html">Home</a></li>
                 <li class="dropdown">
-                    <a href="#" style="color: var(--accent-color);">Our Programs ▾</a>
+                    <a href="#" style="color: var(--accent);">Our Programs <i class="fas fa-chevron-down" style="font-size: 0.8rem;"></i></a>
                     <div class="dropdown-content">
-                        <a href="school.html">Tubafashe Academy</a>
-                        <a href="wellness.html" style="font-weight:bold;">Serenity Wellness</a>
-                        <a href="hydroponics.html">Cornucopia Hydroponics</a>
-                        <a href="arts.html">Ubuntu Arts</a>
+                        <a href="school.html"><i class="fas fa-graduation-cap"></i> Tubafashe Academy</a>
+                        <a href="wellness.html" style="background:#f0f0f0; color:var(--accent);"><i class="fas fa-heart"></i> Serenity Wellness</a>
+                        <a href="hydroponics.html"><i class="fas fa-leaf"></i> Cornucopia Farm</a>
+                        <a href="arts.html"><i class="fas fa-palette"></i> Ubuntu Arts</a>
                     </div>
                 </li>
-                <li><a href="about.html">About Us</a></li>
+                <li><a href="about.html">About</a></li>
                 <li><a href="partners.html">Partners</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="support.html">Support Us</a></li>
+                <li><a href="support.html">Donate</a></li>
                 <li><a href="contact.html" class="btn">Contact</a></li>
             </ul>
         </nav>
@@ -58,70 +62,65 @@
     <section class="hero wellness-hero">
         <h1>Serenity Wellness Oasis</h1>
         <p>A sanctuary for emotional healing, resilience, and psychological balance.</p>
-        <a href="contact.html" class="btn" style="background-color: var(--primary-color);">Get Support</a>
+        <a href="contact.html" class="btn" style="background: var(--primary-dark);">Get Support</a>
     </section>
 
     <!-- MAIN CONTENT -->
     <section class="pillars">
         
-        <!-- Intro -->
-        <div style="max-width: 800px; margin: 0 auto; text-align: center;">
-            <p>The Serenity Wellness Center is a wellbeing facility that integrates therapeutic arts, counseling, and creative therapies to strengthen resilience and emotional balance. We support children, parents, educators, and the wider community.</p>
+        <!-- Intro & Walk-in Policy -->
+        <div style="text-align: center; margin-bottom: 50px;">
+            <p style="font-size: 1.1rem; max-width: 800px; margin: 0 auto;">We integrate therapeutic arts, counseling, and creative therapies to support children, parents, educators, and the wider community.</p>
             
-            <!-- Walk-in Policy Banner -->
-            <div class="open-hours-banner">
-                👋 Open to the General Public<br>
-                <span style="font-weight: normal;">No appointment required for initial visits. Walk-ins are welcome.</span>
+            <!-- The Special Banner -->
+            <div class="walk-in-banner">
+                <div class="banner-icon"><i class="fas fa-door-open"></i></div>
+                <div style="text-align: left;">
+                    <h4 style="margin-bottom: 5px; color: #00695c;">Open to the Public</h4>
+                    <p style="margin: 0;">No appointment required for initial visits. Walk-ins are welcome Monday to Friday.</p>
+                </div>
             </div>
         </div>
 
         <!-- Services Grid -->
-        <h2 class="section-title" style="margin-top: 50px;">Our Services</h2>
+        <h2 class="section-title">Our Services</h2>
         <div class="grid-container">
             
-            <!-- Service 1 -->
+            <!-- Counseling -->
             <div class="card">
+                <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=800&q=80" alt="Counseling" class="card-img">
                 <div class="card-content">
-                    <div class="service-icon">🧠</div>
-                    <h3 style="color: var(--wellness-color);">Counseling & Support</h3>
-                    <p>We provide emotional and psychological support for both children and adults. Our safe environment facilitates rehabilitation and reintegration.</p>
+                    <h3><i class="fas fa-user-nurse"></i> Counseling</h3>
+                    <p>Professional emotional and psychological support for both children and adults. A safe space for rehabilitation and reintegration.</p>
                 </div>
             </div>
 
-            <!-- Service 2 -->
+            <!-- Therapeutic Arts -->
             <div class="card">
+                <img src="https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?auto=format&fit=crop&w=800&q=80" alt="Art Therapy" class="card-img">
                 <div class="card-content">
-                    <div class="service-icon">🎨</div>
-                    <h3 style="color: var(--wellness-color);">Therapeutic Arts</h3>
-                    <p>Using creativity as a tool for healing. We use painting, drawing, and other artistic expressions to help individuals process emotions and trauma.</p>
+                    <h3><i class="fas fa-paint-brush"></i> Therapeutic Arts</h3>
+                    <p>Using creativity as a tool for healing. Painting, drawing, and artistic expression help individuals process emotions and trauma.</p>
                 </div>
             </div>
 
-            <!-- Service 3 -->
+            <!-- Training -->
             <div class="card">
+                <img src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=800&q=80" alt="Training" class="card-img">
                 <div class="card-content">
-                    <div class="service-icon">🎓</div>
-                    <h3 style="color: var(--wellness-color);">Training Programs</h3>
-                    <p>We train teachers, parents, and caregivers in:</p>
-                    <ul style="padding-left: 20px; font-size: 0.9rem; color: #666;">
-                        <li>Stress Management</li>
-                        <li>Emotional Regulation</li>
-                        <li>Mental Health First Aid</li>
-                        <li>Tools for Everyday Wellbeing</li>
-                    </ul>
+                    <h3><i class="fas fa-chalkboard-teacher"></i> Training Programs</h3>
+                    <p>Equipping teachers and parents with skills in Stress Management, Emotional Regulation, and Mental Health First Aid.</p>
                 </div>
             </div>
 
         </div>
 
-        <!-- Impact Section -->
-        <div style="margin-top: 60px; background: #fff; padding: 40px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
-            <h3 style="color: var(--wellness-color);">Why This Matters</h3>
-            <p>In our community, many families face challenges related to past trauma or daily hardships. We believe that:</p>
-            <br>
-            <blockquote style="border-left: 4px solid var(--wellness-color); padding-left: 15px; font-style: italic; color: #555;">
-                "Sending children to schools is one of the key investments... but ensuring their minds are at peace is what allows them to truly learn and thrive."
-            </blockquote>
+        <!-- Quote Section -->
+        <div style="margin-top: 80px; text-align: center; opacity: 0.8;">
+            <i class="fas fa-quote-left" style="font-size: 2rem; color: var(--accent); margin-bottom: 20px;"></i>
+            <h3 style="font-family: 'Open Sans', sans-serif; font-weight: 400; font-style: italic;">
+                "Ensuring minds are at peace is what allows children to truly learn and thrive."
+            </h3>
         </div>
 
     </section>
@@ -130,9 +129,12 @@
     <footer>
         <div class="footer-grid">
             <div class="footer-col">
-                <h4>Contact Wellness Center</h4>
-                <p><strong>Phone:</strong> +250 788 305 007</p>
-                <p><strong>Location:</strong> Rwamagana Dist., Nyakariro Sector</p>
+                <h4>Contact Wellness</h4>
+                <ul>
+                    <li><i class="fab fa-whatsapp"></i> +250 788 305 007</li>
+                    <li><i class="fas fa-clock"></i> Mon-Fri: 8:00 AM - 5:00 PM</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Rwamagana Dist., Nyakariro</li>
+                </ul>
             </div>
             <div class="footer-col">
                 <h4>Quick Links</h4>
@@ -143,9 +145,8 @@
                 </ul>
             </div>
             <div class="footer-col">
-                <h4>Opening Hours</h4>
-                <p>Mon - Fri: 8:00 AM - 5:00 PM</p>
-                <p><em>Walk-ins Welcome</em></p>
+                <h4>Confidentiality</h4>
+                <p>We provide a safe, private environment for all our visitors.</p>
             </div>
         </div>
         <div class="footer-bottom">
@@ -153,7 +154,6 @@
         </div>
     </footer>
 
-    <!-- Link to external script -->
     <script src="../script.js"></script>
 </body>
 </html>

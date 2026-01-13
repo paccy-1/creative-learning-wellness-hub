@@ -3,62 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tubafashe Academy School | Rwanda</title>
-    <!-- Link to the main style file (one folder up) -->
+    <title>Tubafashe Academy | Creative Learning Hub</title>
+    
+    <!-- CSS, Fonts, Icons -->
     <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <style>
-        /* Specific Styles for School Page */
-        .school-hero {
-            background-color: var(--school-color); /* Blue */
-            /* Add a background image for the school later if you have one */
-            /* background-image: url('../images/school-bg.jpg'); */ 
-        }
-        .info-box {
-            background: #eef7fc;
-            border-left: 5px solid var(--school-color);
-            padding: 20px;
-            margin: 20px 0;
-        }
-        .head-teacher {
+        /* Special Layout for Head Teacher Section */
+        .head-teacher-card {
             display: flex;
             align-items: center;
-            gap: 20px;
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            gap: 30px;
+            background: #fff;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            margin-top: 40px;
+            border-left: 5px solid var(--primary-dark);
         }
         .ht-photo {
-            width: 100px;
-            height: 100px;
-            background-color: #ddd;
+            width: 150px;
+            height: 150px;
             border-radius: 50%;
             object-fit: cover;
+            border: 4px solid var(--bg-light);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        @media (max-width: 768px) {
+            .head-teacher-card { flex-direction: column; text-align: center; }
         }
     </style>
 </head>
 <body>
 
-    <!-- NAVIGATION -->
+    <!-- MODERN HEADER -->
     <header>
         <nav class="navbar">
-            <div class="logo"><a href="../index.html">Creative Learning & Wellness Harmony Hub</a></div>
-            <div class="menu-toggle" id="mobile-menu">☰</div>
+            <div class="logo"><a href="../index.html">CLWH <span>Hub</span></a></div>
+            <div class="menu-toggle" id="mobile-menu"><i class="fas fa-bars"></i></div>
             <ul class="nav-links">
                 <li><a href="../index.html">Home</a></li>
                 <li class="dropdown">
-                    <a href="#" style="color: var(--accent-color);">Our Programs ▾</a>
+                    <a href="#" style="color: var(--accent);">Our Programs <i class="fas fa-chevron-down" style="font-size: 0.8rem;"></i></a>
                     <div class="dropdown-content">
-                        <a href="school.html" style="font-weight:bold;">Tubafashe Academy</a>
-                        <a href="wellness.html">Serenity Wellness</a>
-                        <a href="hydroponics.html">Cornucopia Hydroponics</a>
-                        <a href="arts.html">Ubuntu Arts</a>
+                        <a href="school.html" style="background:#f0f0f0; color:var(--accent);"><i class="fas fa-graduation-cap"></i> Tubafashe Academy</a>
+                        <a href="wellness.html"><i class="fas fa-heart"></i> Serenity Wellness</a>
+                        <a href="hydroponics.html"><i class="fas fa-leaf"></i> Cornucopia Farm</a>
+                        <a href="arts.html"><i class="fas fa-palette"></i> Ubuntu Arts</a>
                     </div>
                 </li>
-                <li><a href="about.html">About Us</a></li>
+                <li><a href="about.html">About</a></li>
                 <li><a href="partners.html">Partners</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="support.html">Support Us</a></li>
+                <li><a href="support.html">Donate</a></li>
                 <li><a href="contact.html" class="btn">Contact</a></li>
             </ul>
         </nav>
@@ -66,87 +65,71 @@
 
     <!-- HERO SECTION -->
     <section class="hero school-hero">
-        <h1>Tubafashe Academy School</h1>
+        <h1>Tubafashe Academy</h1>
         <p>"Quality Education, Care, and Affection"</p>
-        <a href="contact.html" class="btn" style="background-color: var(--primary-color);">Enroll Now</a>
+        <a href="contact.html" class="btn" style="background: var(--primary-dark);">Enroll Now</a>
     </section>
 
     <!-- MAIN CONTENT -->
     <section class="pillars">
         
-        <!-- Intro -->
+        <!-- Intro & Achievements -->
         <div style="max-width: 800px; margin: 0 auto; text-align: center;">
-            <p>Tubafashe Academy is a center of academic excellence located in Nyakariro Sector. We provide a comprehensive childcare package that addresses cognitive, emotional, physical, and social wellbeing.</p>
+            <p style="font-size: 1.1rem;">A center of academic excellence in Nyakariro Sector. We provide a comprehensive childcare package addressing cognitive, emotional, physical, and social wellbeing.</p>
             <br>
-            <h3>🏆 Our Achievement</h3>
-            <p>Since our students began sitting for national examinations, we have consistently <strong>ranked 1st in Nyakariro Sector</strong> and remain among the top-performing schools in the district.</p>
+            <div style="background: #e1f5fe; padding: 20px; border-radius: 10px; display: inline-block;">
+                <h3 style="color: #0277bd; margin-bottom: 5px;"><i class="fas fa-trophy"></i> Top Performance</h3>
+                <p>Consistently ranked <strong>1st in Nyakariro Sector</strong> in National Exams.</p>
+            </div>
         </div>
 
         <!-- Curriculum Grid -->
-        <div class="grid-container" style="margin-top: 50px;">
+        <h2 class="section-title" style="margin-top: 60px;">Our Curriculum</h2>
+        <div class="grid-container">
+            
+            <!-- Nursery -->
             <div class="card">
+                <img src="https://images.unsplash.com/photo-1587654780291-39c9404d746b?auto=format&fit=crop&w=800&q=80" alt="Nursery Kids" class="card-img">
                 <div class="card-content">
-                    <h3 style="color: var(--school-color);">Nursery Section</h3>
-                    <p><strong>Curriculum:</strong> Francophone (French system).</p>
-                    <p>We focus on early childhood development through play, social interaction, and foundational language skills.</p>
+                    <h3><i class="fas fa-shapes"></i> Nursery Section</h3>
+                    <p><strong>Francophone Curriculum.</strong> Focusing on early childhood development, play, and foundational French language skills.</p>
                 </div>
             </div>
 
+            <!-- Primary -->
             <div class="card">
+                <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=800&q=80" alt="Primary Students" class="card-img">
                 <div class="card-content">
-                    <h3 style="color: var(--school-color);">Primary Section</h3>
-                    <p><strong>Curriculum:</strong> Bilingual.</p>
-                    <p><strong>Languages:</strong> English, French, and Kinyarwanda.</p>
-                    <p>We prepare students for National Exams with a focus on academic rigor and character building.</p>
+                    <h3><i class="fas fa-book-open"></i> Primary Section</h3>
+                    <p><strong>Bilingual Curriculum.</strong> English, French, and Kinyarwanda. Preparing students for academic rigor and character building.</p>
                 </div>
             </div>
+
+            <!-- Operations Info -->
+            <div class="card">
+                <div class="card-content">
+                    <h3><i class="far fa-calendar-alt"></i> School Info</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom:10px;"><strong>📅 Calendar:</strong> Sept - July (National System)</li>
+                        <li style="margin-bottom:10px;"><strong>📝 Registration:</strong> Starts in August</li>
+                        <li><strong>🚌 Transport:</strong> Coming soon</li>
+                    </ul>
+                    <br>
+                    <a href="contact.html" class="btn" style="background: var(--school-grad); text-align:center;">Contact for Fees</a>
+                </div>
+            </div>
+
         </div>
 
-        <!-- School Life & Ops -->
-        <div class="grid-container" style="margin-top: 50px;">
-            
-            <!-- Operations Info -->
+        <!-- Head Teacher Section -->
+        <div class="head-teacher-card">
+            <!-- Professional Placeholder Avatar -->
+            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=300&q=80" alt="Mme Alphonsine" class="ht-photo">
             <div>
-                <h2 class="section-title" style="text-align: left;">School Information</h2>
-                
-                <div class="info-box">
-                    <h4>📅 Academic Calendar</h4>
-                    <p>We follow the <strong>Rwanda National Education Calendar</strong>.</p>
-                    <p><strong>Year:</strong> September to July.</p>
-                </div>
-
-                <div class="info-box">
-                    <h4>📝 Registration</h4>
-                    <p>Registration for new students starts in <strong>August</strong> each year.</p>
-                    <p><em>Contact us for requirements.</em></p>
-                </div>
-
-                <div class="info-box">
-                    <h4>🚌 Transport</h4>
-                    <p>School bus services are being developed and will be introduced soon.</p>
-                </div>
+                <h3 style="margin-bottom: 10px;">Mme Alphonsine Mujuganje</h3>
+                <p style="color: var(--accent); font-weight: bold; margin-bottom: 10px;">Head of School</p>
+                <p>"We believe a serene environment surrounded by gardens is essential for learning and healing. We are committed to guiding every child to their full potential."</p>
             </div>
-
-            <!-- Leadership & Environment -->
-            <div>
-                <h2 class="section-title" style="text-align: left;">Leadership</h2>
-                <div class="head-teacher">
-                    <!-- Placeholder for Head Teacher Photo -->
-                    <img src="https://via.placeholder.com/150" alt="Mme Alphonsine Mujuganje" class="ht-photo">
-                    <div>
-                        <h4>Mme Alphonsine Mujuganje</h4>
-                        <p><strong>Head of School</strong></p>
-                        <p>Leading with a passion for child development and academic excellence.</p>
-                    </div>
-                </div>
-
-                <h3 style="margin-top: 30px;">Our Environment</h3>
-                <p>Located in Matyazo Village, our school is surrounded by gardens and green spaces. We believe a serene environment is essential for learning and healing.</p>
-                
-                <h3 style="margin-top: 20px;">Global Partners</h3>
-                <p>We work with <strong>St. Joseph School (Canada)</strong> and partner institutions in <strong>Sweden</strong> and <strong>France</strong> to bring global perspectives to our classrooms.</p>
-            </div>
-
         </div>
 
     </section>
@@ -156,20 +139,22 @@
         <div class="footer-grid">
             <div class="footer-col">
                 <h4>Contact School</h4>
-                <p><strong>Phone:</strong> +250 788 305 007</p>
-                <p><strong>Location:</strong> Rwamagana Dist., Nyakariro Sector</p>
+                <ul>
+                    <li><i class="fab fa-whatsapp"></i> +250 788 305 007</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Rwamagana Dist., Nyakariro</li>
+                </ul>
             </div>
             <div class="footer-col">
                 <h4>Quick Links</h4>
                 <ul>
                     <li><a href="../index.html">Home</a></li>
                     <li><a href="wellness.html">Wellness Center</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="contact.html">Enroll Now</a></li>
                 </ul>
             </div>
             <div class="footer-col">
-                <h4>Legal</h4>
-                <p>Accredited by MINEDUC.</p>
+                <h4>Global Partners</h4>
+                <p>Collaborating with schools in Canada, Sweden & France.</p>
             </div>
         </div>
         <div class="footer-bottom">
@@ -177,7 +162,6 @@
         </div>
     </footer>
 
-    <!-- Link to external script (one folder up) -->
     <script src="../script.js"></script>
 </body>
 </html>

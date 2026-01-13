@@ -4,68 +4,95 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Support Us | Creative Learning Hub</title>
+    
+    <!-- CSS, Fonts, Icons -->
     <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <style>
-        /* Specific Styles for Support Page */
-        .support-hero {
-            background-color: var(--accent-color); /* Orange */
-        }
-        .donation-box {
-            background: #fff;
-            border: 2px solid #eee;
-            border-radius: 10px;
+        /* Bank Card Style */
+        .bank-card {
+            background: linear-gradient(135deg, #2c3e50, #4ca1af);
+            color: white;
             padding: 30px;
-            margin-bottom: 30px;
-            transition: transform 0.3s;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            position: relative;
+            overflow: hidden;
         }
-        .donation-box:hover {
-            border-color: var(--accent-color);
-            transform: translateY(-5px);
+        .bank-card::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200px;
+            height: 200px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
         }
-        .bank-details {
-            background: #f9f9f9;
-            padding: 20px;
-            border-left: 5px solid var(--primary-color);
-            font-family: monospace;
-            font-size: 1.1rem;
-            margin: 20px 0;
+        .bank-label {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            opacity: 0.8;
+            margin-bottom: 5px;
+            display: block;
+        }
+        .bank-value {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
         }
         .copy-note {
-            font-size: 0.8rem;
-            color: #666;
-            margin-top: 5px;
+            font-size: 0.9rem;
+            color: #bdc3c7;
+            margin-top: 15px;
+            border-top: 1px solid rgba(255,255,255,0.2);
+            padding-top: 10px;
+        }
+
+        /* MoMo Card */
+        .momo-box {
+            background: #ffecb3;
+            border-left: 5px solid #ffca28;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
         }
     </style>
 </head>
 <body>
 
-    <!-- NAVIGATION -->
+    <!-- MODERN HEADER -->
     <header>
         <nav class="navbar">
-            <div class="logo"><a href="../index.html">Creative Learning & Wellness Harmony Hub</a></div>
-            <div class="menu-toggle" id="mobile-menu">☰</div>
+            <div class="logo"><a href="../index.html">CLWH <span>Hub</span></a></div>
+            <div class="menu-toggle" id="mobile-menu"><i class="fas fa-bars"></i></div>
             <ul class="nav-links">
                 <li><a href="../index.html">Home</a></li>
                 <li class="dropdown">
-                    <a href="#" style="color: var(--accent-color);">Our Programs ▾</a>
+                    <a href="#" style="color: var(--accent);">Our Programs <i class="fas fa-chevron-down" style="font-size: 0.8rem;"></i></a>
                     <div class="dropdown-content">
-                        <a href="school.html">Tubafashe Academy</a>
-                        <a href="wellness.html">Serenity Wellness</a>
-                        <a href="hydroponics.html">Cornucopia Hydroponics</a>
-                        <a href="arts.html">Ubuntu Arts</a>
+                        <a href="school.html"><i class="fas fa-graduation-cap"></i> Tubafashe Academy</a>
+                        <a href="wellness.html"><i class="fas fa-heart"></i> Serenity Wellness</a>
+                        <a href="hydroponics.html"><i class="fas fa-leaf"></i> Cornucopia Farm</a>
+                        <a href="arts.html"><i class="fas fa-palette"></i> Ubuntu Arts</a>
                     </div>
                 </li>
-                <li><a href="about.html">About Us</a></li>
+                <li><a href="about.html">About</a></li>
                 <li><a href="partners.html">Partners</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="support.html" style="font-weight:bold;">Support Us</a></li>
+                <li><a href="support.html" style="background:#f0f0f0; color:var(--accent);">Donate</a></li>
                 <li><a href="contact.html" class="btn">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <!-- HERO SECTION -->
-    <section class="hero support-hero">
+    <section class="hero" style="background: linear-gradient(135deg, #e67e22, #f39c12);">
         <h1>Make a Difference</h1>
         <p>Your generosity helps us provide education, food, and emotional support to vulnerable children in Rwamagana.</p>
     </section>
@@ -74,48 +101,69 @@
     <section class="pillars">
         
         <!-- Impact Text -->
-        <div style="max-width: 800px; margin: 0 auto 50px; text-align: center;">
-            <h2 class="section-title">Why Donate?</h2>
-            <p>Around the world, millions of children grow up without a chance for good education. With your support, children from vulnerable families become stronger, overcome challenges, and build a happy future.</p>
+        <div style="max-width: 800px; margin: 0 auto 60px; text-align: center;">
+            <h2 class="section-title">Your Impact</h2>
+            <p style="font-size: 1.1rem; color: #555;">Around the world, millions of children grow up without a chance for good education. With your support, children from vulnerable families become stronger, overcome challenges, and build a happy future.</p>
         </div>
 
         <div class="grid-container">
             
-            <!-- Option 1: Bank Transfer -->
-            <div class="donation-box">
-                <h3 style="color: var(--primary-color);">🏛️ Bank Transfer</h3>
-                <p>You can transfer funds directly to our school account in Rwanda.</p>
-                
-                <div class="bank-details">
-                    <strong>Bank:</strong> Banque Populaire du Rwanda (BPR)<br>
-                    <strong>Name:</strong> Tubafashe Academy School<br>
-                    <strong>Account No:</strong> 4493427663<br>
-                    <strong>Swift Code:</strong> BPRWRWRW<br>
-                    <strong>Currency:</strong> RWF
+            <!-- Option 1: Bank Transfer (The Premium Card) -->
+            <div class="card" style="border:none; box-shadow:none; background:transparent;">
+                <h3 style="color: var(--primary-dark); margin-bottom: 20px;"><i class="fas fa-university"></i> Bank Transfer</h3>
+                <div class="bank-card">
+                    <span class="bank-label">Bank Name</span>
+                    <div class="bank-value">Banque Populaire (BPR)</div>
+
+                    <span class="bank-label">Account Name</span>
+                    <div class="bank-value">Tubafashe Academy School</div>
+
+                    <span class="bank-label">Account Number</span>
+                    <div class="bank-value" style="font-size: 1.5rem;">4493427663</div>
+                    
+                    <div style="display:flex; justify-content:space-between;">
+                        <div>
+                            <span class="bank-label">Swift Code</span>
+                            <div>BPRWRWRW</div>
+                        </div>
+                        <div style="text-align:right;">
+                            <span class="bank-label">Currency</span>
+                            <div>RWF</div>
+                        </div>
+                    </div>
+                    
+                    <p class="copy-note">Please include your name in the description.</p>
                 </div>
-                <p class="copy-note">Please include your name in the transfer description so we can thank you.</p>
             </div>
 
             <!-- Option 2: Mobile Money -->
-            <div class="donation-box">
-                <h3 style="color: var(--accent-color);">📱 Mobile Money (MoMo)</h3>
-                <p>Fast and secure donations via MTN Mobile Money.</p>
-                
-                <div style="background: #fff8e1; padding: 20px; border-radius: 5px; margin-top: 20px; text-align: center;">
-                    <p style="font-weight: bold; font-size: 1.2rem;">Code Coming Soon</p>
-                    <p style="font-size: 0.9rem;">Please contact our office to get the current MoMo number:</p>
-                    <a href="tel:+250788305007" style="color: var(--accent-color); font-weight: bold;">+250 788 305 007</a>
+            <div class="card">
+                <div class="card-content">
+                    <h3><i class="fas fa-mobile-alt"></i> Mobile Money</h3>
+                    <p>Fast and secure donations via MTN Mobile Money (MoMo).</p>
+                    
+                    <div class="momo-box">
+                        <i class="fas fa-lock" style="color: #f57f17; margin-bottom: 10px;"></i>
+                        <p style="font-weight: bold; font-size: 1.1rem; color: #f57f17;">Code Coming Soon</p>
+                        <p style="font-size: 0.9rem;">Please contact our office to get the current MoMo number:</p>
+                        <a href="tel:+250788305007" style="color: var(--primary-dark); font-weight: bold; font-size: 1.2rem;">+250 788 305 007</a>
+                    </div>
                 </div>
             </div>
 
             <!-- Option 3: Sponsor a Child -->
-            <div class="donation-box">
-                <h3 style="color: var(--farm-color);">🎓 Sponsor a Child</h3>
-                <p>Cover school fees, meals, and materials for one student for a year.</p>
-                <br>
-                <p>Sponsorship transforms lives directly. If you are interested in a long-term impact, please contact Dr. Chaste directly.</p>
-                <br>
-                <a href="contact.html" class="btn" style="background-color: var(--farm-color);">Contact to Sponsor</a>
+            <div class="card">
+                <div class="card-content">
+                    <h3 style="color: var(--farm-color);"><i class="fas fa-child"></i> Sponsor a Child</h3>
+                    <p>Cover school fees, meals, and materials for one student for a year. Sponsorship transforms lives directly.</p>
+                    <br>
+                    <ul style="margin-bottom: 20px; color: #666;">
+                        <li><i class="fas fa-check" style="color: var(--farm-color);"></i> Termly Updates</li>
+                        <li><i class="fas fa-check" style="color: var(--farm-color);"></i> Photos of Progress</li>
+                        <li><i class="fas fa-check" style="color: var(--farm-color);"></i> Direct Impact</li>
+                    </ul>
+                    <a href="contact.html" class="btn" style="background: var(--farm-grad); width:100%;">Contact to Sponsor</a>
+                </div>
             </div>
 
         </div>
@@ -127,8 +175,10 @@
         <div class="footer-grid">
             <div class="footer-col">
                 <h4>Contact Us</h4>
-                <p><strong>Phone:</strong> +250 788 305 007</p>
-                <p><strong>Location:</strong> Rwamagana Dist., Nyakariro Sector</p>
+                <ul>
+                    <li><i class="fab fa-whatsapp"></i> +250 788 305 007</li>
+                    <li><i class="fas fa-envelope"></i> uwichaste@yahoo.fr</li>
+                </ul>
             </div>
             <div class="footer-col">
                 <h4>Quick Links</h4>
@@ -140,7 +190,7 @@
             </div>
             <div class="footer-col">
                 <h4>Thank You</h4>
-                <p>Every contribution, no matter how small, builds a better future.</p>
+                <p>Every contribution, no matter how small, builds a better future for a child in Rwanda.</p>
             </div>
         </div>
         <div class="footer-bottom">
@@ -148,7 +198,6 @@
         </div>
     </footer>
 
-    <!-- Link to external script -->
     <script src="../script.js"></script>
 </body>
 </html>
