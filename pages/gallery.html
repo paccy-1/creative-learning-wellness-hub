@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
-        /* Specific Gallery Styles */
         .filter-container {
             display: flex;
             justify-content: center;
@@ -42,7 +41,6 @@
             box-shadow: 0 5px 15px rgba(230, 126, 34, 0.3);
         }
 
-        /* Gallery Grid */
         .gallery-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -63,14 +61,14 @@
             transition: transform 0.5s ease;
         }
         .gallery-item:hover img {
-            transform: scale(1.1); /* Zoom effect */
+            transform: scale(1.1);
         }
         .gallery-overlay {
             position: absolute;
             bottom: 0;
             left: 0;
             width: 100%;
-            background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
             padding: 20px;
             opacity: 0;
             transition: 0.3s;
@@ -80,15 +78,17 @@
             color: white;
             font-weight: bold;
             font-size: 0.9rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
         }
         
-        /* Hidden class for filtering */
+        /* Animation for filtering */
         .gallery-item.hide { display: none; }
+        .gallery-item.show { animation: fadeIn 0.5s ease; }
     </style>
 </head>
 <body>
 
-    <!-- MODERN HEADER -->
+    <!-- HEADER -->
     <header>
         <nav class="navbar">
             <div class="logo"><a href="../index.html">CLWH <span>Hub</span></a></div>
@@ -127,47 +127,115 @@
             <button class="filter-btn active" onclick="filterGallery('all')">All Photos</button>
             <button class="filter-btn" onclick="filterGallery('school')">Academy</button>
             <button class="filter-btn" onclick="filterGallery('farm')">Hydroponics</button>
-            <button class="filter-btn" onclick="filterGallery('arts')">Arts & Culture</button>
-            <button class="filter-btn" onclick="filterGallery('wellness')">Wellness</button>
+            <button class="filter-btn" onclick="filterGallery('arts')">Arts & Sports</button>
+            <button class="filter-btn" onclick="filterGallery('community')">Community</button>
         </div>
 
-        <!-- The Photo Grid -->
+        <!-- THE GRAND GRID (All 24 Photos) -->
         <div class="gallery-grid">
             
-            <!-- SCHOOL PHOTOS -->
+            <!-- === SCHOOL CATEGORY === -->
             <div class="gallery-item school">
-                <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=600&q=80" alt="Classroom">
-                <div class="gallery-overlay"><span>Classroom Learning</span></div>
+                <img src="../images/home-hero.jpeg" alt="School Assembly">
+                <div class="gallery-overlay"><span>Morning Assembly</span></div>
             </div>
             <div class="gallery-item school">
-                <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=600&q=80" alt="Graduation">
-                <div class="gallery-overlay"><span>Graduation Day</span></div>
+                <img src="../images/school-hero.jpeg" alt="Outdoor Learning">
+                <div class="gallery-overlay"><span>Serene Learning Environment</span></div>
+            </div>
+            <div class="gallery-item school">
+                <img src="../images/school-writing.jpeg" alt="Students Writing">
+                <div class="gallery-overlay"><span>Focused Students</span></div>
+            </div>
+            <div class="gallery-item school">
+                <img src="../images/gallery-art-class.jpeg" alt="Art Class on Grass">
+                <div class="gallery-overlay"><span>Creative Learning Outdoors</span></div>
             </div>
 
-            <!-- FARM PHOTOS -->
+            <!-- === FARM CATEGORY === -->
             <div class="gallery-item farm">
-                <img src="https://images.unsplash.com/photo-1530836369250-ef72a3f5cda8?auto=format&fit=crop&w=600&q=80" alt="Hydroponics">
-                <div class="gallery-overlay"><span>Hydroponic System</span></div>
+                <img src="../images/farm-team.jpeg" alt="Farm Team">
+                <div class="gallery-overlay"><span>Cornucopia Team</span></div>
             </div>
             <div class="gallery-item farm">
-                <img src="https://images.unsplash.com/photo-1622383563227-044011358d16?auto=format&fit=crop&w=600&q=80" alt="Harvest">
-                <div class="gallery-overlay"><span>Students Harvesting</span></div>
+                <img src="../images/farm-lettuce.jpeg" alt="Lettuce">
+                <div class="gallery-overlay"><span>Hydroponic Harvest</span></div>
+            </div>
+            <div class="gallery-item farm">
+                <img src="../images/farm-system.jpeg" alt="Farm System">
+                <div class="gallery-overlay"><span>Soilless Farming Innovation</span></div>
             </div>
 
-            <!-- ARTS PHOTOS -->
+            <!-- === ARTS & SPORTS CATEGORY === -->
             <div class="gallery-item arts">
-                <img src="https://images.unsplash.com/photo-1508700929628-666bc8bd84ea?auto=format&fit=crop&w=600&q=80" alt="Dance">
-                <div class="gallery-overlay"><span>Traditional Dance</span></div>
+                <img src="../images/arts-hero.jpeg" alt="Basketball Trophies">
+                <div class="gallery-overlay"><span>Basketball Champions</span></div>
             </div>
             <div class="gallery-item arts">
-                <img src="https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?auto=format&fit=crop&w=600&q=80" alt="Art">
-                <div class="gallery-overlay"><span>Creative Arts Class</span></div>
+                <img src="../images/arts-cycling.jpeg" alt="Cycling Team">
+                <div class="gallery-overlay"><span>Cycling Academy</span></div>
             </div>
-            
-            <!-- WELLNESS PHOTOS -->
-            <div class="gallery-item wellness">
-                <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=600&q=80" alt="Counseling">
-                <div class="gallery-overlay"><span>Counseling Session</span></div>
+            <div class="gallery-item arts">
+                <img src="../images/arts-drawing.jpeg" alt="Tree Drawings">
+                <div class="gallery-overlay"><span>Nature Art</span></div>
+            </div>
+            <div class="gallery-item arts">
+                <img src="../images/gallery-bball-action.jpeg" alt="Basketball Action">
+                <div class="gallery-overlay"><span>Action on the Court</span></div>
+            </div>
+            <div class="gallery-item arts">
+                <img src="../images/gallery-bball-team.jpeg" alt="Full Team">
+                <div class="gallery-overlay"><span>Team Spirit</span></div>
+            </div>
+            <div class="gallery-item arts">
+                <img src="../images/gallery-art-detail.jpeg" alt="Family Drawing">
+                <div class="gallery-overlay"><span>"Umuryango" (Family) Drawing</span></div>
+            </div>
+            <div class="gallery-item arts">
+                <img src="../images/gallery-cycling-class.jpeg" alt="Cycling Class">
+                <div class="gallery-overlay"><span>Young Cyclists</span></div>
+            </div>
+            <div class="gallery-item arts">
+                <img src="../images/gallery-cyclist-portrait.jpeg" alt="Cyclist Portrait">
+                <div class="gallery-overlay"><span>Future Champion</span></div>
+            </div>
+            <div class="gallery-item arts">
+                <img src="../images/gallery-art-uwubu.jpeg" alt="Uwubu Art">
+                <div class="gallery-overlay"><span>Student Artwork</span></div>
+            </div>
+            <div class="gallery-item arts">
+                <img src="../images/gallery-cycling-coach.jpeg" alt="Cycling Coach">
+                <div class="gallery-overlay"><span>Coaching the Team</span></div>
+            </div>
+            <div class="gallery-item arts">
+                <img src="../images/gallery-bball-coach.jpeg" alt="Basketball Coach">
+                <div class="gallery-overlay"><span>Mentorship</span></div>
+            </div>
+            <div class="gallery-item arts">
+                <img src="../images/gallery-bball-group.jpeg" alt="Basketball Group">
+                <div class="gallery-overlay"><span>Training Session</span></div>
+            </div>
+            <div class="gallery-item arts">
+                <img src="../images/gallery-art-bikes.jpeg" alt="Art and Bikes">
+                <div class="gallery-overlay"><span>Art & Sports Combined</span></div>
+            </div>
+
+            <!-- === COMMUNITY & LEADERSHIP (Wellness) === -->
+            <div class="gallery-item community">
+                <img src="../images/founder-shake.jpeg" alt="Founder Handshake">
+                <div class="gallery-overlay"><span>Leadership & Care</span></div>
+            </div>
+            <div class="gallery-item community">
+                <img src="../images/about-event.jpeg" alt="Ribbon Cutting">
+                <div class="gallery-overlay"><span>Official Opening</span></div>
+            </div>
+            <div class="gallery-item community">
+                <img src="../images/gallery-bball-coach.jpeg" alt="Celebration">
+                <div class="gallery-overlay"><span>Celebrating Success</span></div>
+            </div>
+            <div class="gallery-item community">
+                <img src="../images/team-directors.jpeg" alt="Directors">
+                <div class="gallery-overlay"><span>Dedicated Leadership</span></div>
             </div>
 
         </div>
@@ -197,32 +265,33 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2025 Creative Learning & Wellness Harmony Hub.</p>
+            <p>&copy; 2026 Creative Learning & Wellness Harmony Hub.</p>
         </div>
     </footer>
 
-    <!-- EXTERNAL SCRIPT (Menu) -->
     <script src="../script.js"></script>
 
-    <!-- INTERNAL SCRIPT (Filtering) -->
     <script>
         function filterGallery(category) {
-            // 1. Remove active class from all buttons
+            // 1. Buttons
             let buttons = document.querySelectorAll('.filter-btn');
             buttons.forEach(btn => btn.classList.remove('active'));
-            
-            // 2. Add active class to clicked button
             event.target.classList.add('active');
 
-            // 3. Filter images
+            // 2. Images
             let items = document.querySelectorAll('.gallery-item');
             
             items.forEach(item => {
+                // Reset animation
+                item.classList.remove('show');
+                
                 if (category === 'all') {
                     item.classList.remove('hide');
+                    item.classList.add('show');
                 } else {
                     if (item.classList.contains(category)) {
                         item.classList.remove('hide');
+                        item.classList.add('show');
                     } else {
                         item.classList.add('hide');
                     }

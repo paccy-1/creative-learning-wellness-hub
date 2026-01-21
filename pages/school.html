@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tubafashe Academy | Creative Learning Hub</title>
-    
+
     <!-- CSS, Fonts, Icons -->
     <link rel="stylesheet" href="../style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
     <style>
-        /* Special Layout for Head Teacher Section */
         .head-teacher-card {
             display: flex;
             align-items: center;
@@ -23,22 +25,28 @@
             margin-top: 40px;
             border-left: 5px solid var(--primary-dark);
         }
+
         .ht-photo {
             width: 150px;
             height: 150px;
             border-radius: 50%;
             object-fit: cover;
             border: 4px solid var(--bg-light);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
+
         @media (max-width: 768px) {
-            .head-teacher-card { flex-direction: column; text-align: center; }
+            .head-teacher-card {
+                flex-direction: column;
+                text-align: center;
+            }
         }
     </style>
 </head>
+
 <body>
 
-    <!-- MODERN HEADER -->
+    <!-- HEADER -->
     <header>
         <nav class="navbar">
             <div class="logo"><a href="../index.html">CLWH <span>Hub</span></a></div>
@@ -46,9 +54,11 @@
             <ul class="nav-links">
                 <li><a href="../index.html">Home</a></li>
                 <li class="dropdown">
-                    <a href="#" style="color: var(--accent);">Our Programs <i class="fas fa-chevron-down" style="font-size: 0.8rem;"></i></a>
+                    <a href="#" style="color: var(--accent);">Our Programs <i class="fas fa-chevron-down"
+                            style="font-size: 0.8rem;"></i></a>
                     <div class="dropdown-content">
-                        <a href="school.html" style="background:#f0f0f0; color:var(--accent);"><i class="fas fa-graduation-cap"></i> Tubafashe Academy</a>
+                        <a href="school.html" style="background:#f0f0f0; color:var(--accent);"><i
+                                class="fas fa-graduation-cap"></i> Tubafashe Academy</a>
                         <a href="wellness.html"><i class="fas fa-heart"></i> Serenity Wellness</a>
                         <a href="hydroponics.html"><i class="fas fa-leaf"></i> Cornucopia Farm</a>
                         <a href="arts.html"><i class="fas fa-palette"></i> Ubuntu Arts</a>
@@ -63,8 +73,9 @@
         </nav>
     </header>
 
-    <!-- HERO SECTION -->
-    <section class="hero school-hero">
+    <!-- HERO SECTION (Real Photo) -->
+    <section class="hero school-hero"
+        style="background: linear-gradient(rgba(41, 128, 185, 0.8), rgba(109, 213, 250, 0.8)), url('../images/school-hero.jpg'); background-size: cover; background-position: center;">
         <h1>Tubafashe Academy</h1>
         <p>"Quality Education, Care, and Affection"</p>
         <a href="contact.html" class="btn" style="background: var(--primary-dark);">Enroll Now</a>
@@ -72,10 +83,11 @@
 
     <!-- MAIN CONTENT -->
     <section class="pillars">
-        
-        <!-- Intro & Achievements -->
+
+        <!-- Intro -->
         <div style="max-width: 800px; margin: 0 auto; text-align: center;">
-            <p style="font-size: 1.1rem;">A center of academic excellence in Nyakariro Sector. We provide a comprehensive childcare package addressing cognitive, emotional, physical, and social wellbeing.</p>
+            <p style="font-size: 1.1rem;">A center of academic excellence in Nyakariro Sector. We provide a
+                comprehensive childcare package addressing cognitive, emotional, physical, and social wellbeing.</p>
             <br>
             <div style="background: #e1f5fe; padding: 20px; border-radius: 10px; display: inline-block;">
                 <h3 style="color: #0277bd; margin-bottom: 5px;"><i class="fas fa-trophy"></i> Top Performance</h3>
@@ -86,26 +98,28 @@
         <!-- Curriculum Grid -->
         <h2 class="section-title" style="margin-top: 60px;">Our Curriculum</h2>
         <div class="grid-container">
-            
-            <!-- Nursery -->
+
+            <!-- Nursery (Real Photo: Kids drawing on grass) -->
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1587654780291-39c9404d746b?auto=format&fit=crop&w=800&q=80" alt="Nursery Kids" class="card-img">
+                <img src="../images/gallery-class.jpeg" alt="Nursery Kids" class="card-img">
                 <div class="card-content">
                     <h3><i class="fas fa-shapes"></i> Nursery Section</h3>
-                    <p><strong>Francophone Curriculum.</strong> Focusing on early childhood development, play, and foundational French language skills.</p>
+                    <p><strong>Francophone Curriculum.</strong> Focusing on early childhood development, play, and
+                        foundational French language skills.</p>
                 </div>
             </div>
 
-            <!-- Primary -->
+            <!-- Primary (Real Photo: Writing on clipboards) -->
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=800&q=80" alt="Primary Students" class="card-img">
+                <img src="../images/primary-section.jpeg" alt="Primary Students" class="card-img">
                 <div class="card-content">
                     <h3><i class="fas fa-book-open"></i> Primary Section</h3>
-                    <p><strong>Bilingual Curriculum.</strong> English, French, and Kinyarwanda. Preparing students for academic rigor and character building.</p>
+                    <p><strong>Bilingual Curriculum.</strong> English, French, and Kinyarwanda. Preparing students for
+                        academic rigor and character building.</p>
                 </div>
             </div>
 
-            <!-- Operations Info -->
+            <!-- Info Card -->
             <div class="card">
                 <div class="card-content">
                     <h3><i class="far fa-calendar-alt"></i> School Info</h3>
@@ -115,20 +129,23 @@
                         <li><strong>🚌 Transport:</strong> Coming soon</li>
                     </ul>
                     <br>
-                    <a href="contact.html" class="btn" style="background: var(--school-grad); text-align:center;">Contact for Fees</a>
+                    <a href="contact.html" class="btn"
+                        style="background: var(--school-grad); text-align:center;">Contact for Fees</a>
                 </div>
             </div>
 
         </div>
 
-        <!-- Head Teacher Section -->
+        <!-- Head Teacher (Placeholder until you get the photo) -->
         <div class="head-teacher-card">
-            <!-- Professional Placeholder Avatar -->
-            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=300&q=80" alt="Mme Alphonsine" class="ht-photo">
+            <!-- Keeping generic placeholder as requested -->
+            <img src="https://ui-avatars.com/api/?name=Mme+Alphonsine&background=random&size=150" alt="Mme Alphonsine"
+                class="ht-photo">
             <div>
                 <h3 style="margin-bottom: 10px;">Mme Alphonsine Mujuganje</h3>
                 <p style="color: var(--accent); font-weight: bold; margin-bottom: 10px;">Head of School</p>
-                <p>"We believe a serene environment surrounded by gardens is essential for learning and healing. We are committed to guiding every child to their full potential."</p>
+                <p>"We believe a serene environment surrounded by gardens is essential for learning and healing. We are
+                    committed to guiding every child to their full potential."</p>
             </div>
         </div>
 
@@ -158,10 +175,11 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2025 Creative Learning & Wellness Harmony Hub.</p>
+            <p>&copy; 2026 Creative Learning & Wellness Harmony Hub.</p>
         </div>
     </footer>
 
     <script src="../script.js"></script>
 </body>
+
 </html>
